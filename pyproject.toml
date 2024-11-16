@@ -9,6 +9,7 @@ packages = [{include = "tfgha", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.12"
 duckdb = "^1.1.3"
+flask = "^3.1.0"
 
 
 [build-system]
