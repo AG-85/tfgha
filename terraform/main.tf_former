@@ -9,14 +9,19 @@ resource "aws_instance" "py_server" {
   user_data = <<-EOF
               #!/bin/bash
               sudo apt-get update
-              sudo apt-get install -y python3 python3-pip git
+              sudo apt-get install -y python3 python3-pip
               pip3 install flask requests
-
-              # Clone the GitHub repository
-              cd /home/ubuntu
-              git clone https://github.com/proquickly/tfgha.git
-              cd /home/ubuntu/tfgha/src/tfgha
-
+              mkdir -p /home/ubuntu/app
+              cat <<EOL > /home/ubuntu/app/app.py
+              from flask import Flask
+              app = Flask(__name__)
+              @app.route('/')
+              def hello():
+                  return "Hello from Python on AWS via terraform in our lesson"
+              if __name__ == '__main__':
+                  app.run(host='0.0.0.0', port=5000)
+              EOL
+              cd /home/ubuntu/app
               nohup python3 app.py &
               EOF
 
@@ -28,7 +33,7 @@ resource "aws_instance" "py_server" {
 }
 
 resource "aws_security_group" "allow_http" {
-  name        = "allow_http_flask_web_app"
+  name        = "allow_http_flask_web"
   description = "Allow inbound HTTP traffic"
 
   ingress {

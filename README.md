@@ -34,14 +34,16 @@ The workflow will:
 	4.	Create a plan
 	5.	Apply the infrastructure changes
 
-After deployment, you can access your Hello World server at:
-
-http://<EC2_PUBLIC_IP>:8080
-
 # IMPORTANT
 To destroy the infrastructure when deploying manually (not via action), run terraform destroy locally.
 
 Steps to be defined later in a video. now works remote and autodeletes
 
-CARE WHERE YOU PUT SECRETS - MUST BE IN REPO (not env)
-this now runs locally - upadted aws config
+CARE WHERE YOU PUT SECRETS - MUST BE IN GitHub REPO settings (not env)
+
+eg: https://github.com/proquickly/<your-repo-name>/settings/secrets/actions
+
+get your aws keys from your account:
+https://us-east-1.console.aws.amazon.com/iam/home?region=<your-region>#/users/details/<your-user-name>?section=permissions
+
+this now runs locally - updated aws config
