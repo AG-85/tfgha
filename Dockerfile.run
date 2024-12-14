@@ -1,0 +1,6 @@
+#TBD
+FROM python:3.13.1
+
+WORKDIR /app
+COPY dist/*.whl ./
+RUN pip install $(find . -name "*.whl" -type f -printf "%T@ %p\n" | sort -n | tail -1 | cut -f2- -d" ")

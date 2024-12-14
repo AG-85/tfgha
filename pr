@@ -1,0 +1,2 @@
+#!/bin/zsh
+docker run --rm -it -v .:/home/app/app --name pyhack pyhack zsh

@@ -9,6 +9,7 @@ packages = [{include = "tfgha", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^3.1.0"
+pytest = "^8.3.4"
 
 
 [build-system]
