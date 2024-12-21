@@ -55,7 +55,7 @@ jobs:
 
     - name: Terraform Init
       run: |
-        terraform init
+        terraform init -upgrade
       working-directory: terraform
 
     - name: Terraform Plan
