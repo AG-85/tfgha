@@ -110,3 +110,4 @@ resource "aws_instance" "py_server" {
     aws_security_group.allow_http.id, aws_security_group.allow_ssh.id
   ]
 }
+
