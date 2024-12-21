@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello from Python deployed with poetry"
+    return "Hello from Python deployed with poetry modified"
 
 
 if __name__ == '__main__':
