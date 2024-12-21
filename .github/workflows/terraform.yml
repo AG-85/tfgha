@@ -1,10 +1,12 @@
 name: Terraform AWS Deployment
-
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+env:
+  ACTIONS_STEP_DEBUG: true
+  AWS_SDK_LOAD_CONFIG: true
 
 jobs:
   terraform:
@@ -15,24 +17,41 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: us-west-2
 
+
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v2
+      uses: hashicorp/setup-terraform@v3
 
     - name: Verify Terraform files
       run: |
         pwd
         ls -la
 
+
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v2
+      uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
+
+    - name: Install AWS CLI
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install --update
+        aws --version
+
+    - name: Debug AWS Credentials
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}"
+        echo "AWS_SECRET_ACCESS_KEY length: ${#AWS_SECRET_ACCESS_KEY}" 
 
     - name: Terraform Init
       run: |
@@ -49,4 +68,3 @@ jobs:
       run: |
         terraform apply -auto-approve
       working-directory: terraform
-

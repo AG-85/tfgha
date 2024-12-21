@@ -2,6 +2,8 @@ provider "aws" {
   region = "us-west-2"
 }
 
+provider "random" {}
+
 data "aws_security_groups" "all" {
   filter {
     name   = "group-name"
@@ -42,7 +44,6 @@ resource "null_resource" "cleanup_security_groups" {
 resource "random_id" "suffix" {
   byte_length = 4
 }
-
 
 resource "aws_key_pair" "deployer" {
   key_name   = "deployer-key-${random_id.suffix.hex}"
@@ -108,6 +109,11 @@ resource "aws_instance" "py_server" {
 
   vpc_security_group_ids = [
     aws_security_group.allow_http.id, aws_security_group.allow_ssh.id
+  ]
+
+  depends_on = [
+    aws_security_group.allow_http,
+    aws_security_group.allow_ssh
   ]
 }
 
