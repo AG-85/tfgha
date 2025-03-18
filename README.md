@@ -1,20 +1,32 @@
-🚀 Automation QA Enthusiast
+🚀 Automation QA Engineer | 10+ Years Experience
 
-Hi! I'm Ambikha Gowrishankar, a QA Engineer with 10+ years of experience in software testing, transitioning from manual QA to a strong focus on test automation and DevOps practices. I am passionate about building scalable, efficient, and reliable automation frameworks to enhance software quality.
+
+Hi! I'm Ambikha, a QA Engineer with 10+ years of experience in software testing. While I have a strong foundation in manual testing, my primary focus is on test automation, DevOps practices, and AI-driven testing solutions.
+
+I'm passionate about building scalable, efficient automation frameworks and integrating AI into QA to optimize testing processes.
 
 🔧 My Expertise & Learning Journey
 
-✔ Test Automation – Expanding my expertise in Selenium, Pytest, and API automation
-✔ CI/CD Pipelines – Implementing automated testing within Jenkins & GitHub Actions
-✔ Infrastructure as Code – Leveraging Terraform & Docker for test environments
-✔ AI in QA – Exploring AI-driven testing strategies for smarter automation
+🚀 Test Automation & Tools
+✅ Selenium, Pytest, API Testing
+✅ Test Automation Framework Development
+✅ Performance & Load Testing
+⚙️ CI/CD & DevOps
+🔹 Jenkins & GitHub Actions for continuous testing
+🔹 Terraform & Docker for Infrastructure as Code
+🔹 Automated Deployment Strategies
+🤖 AI in QA
+Exploring AI-driven testing tools for smarter automation
+Investigating AI-based defect prediction and test case generation
+📊 GitHub Stats
 
-💡 Why Me?
 
-Deep understanding of manual and automated testing methodologies
-Actively developing automation frameworks to improve efficiency
-Strong focus on CI/CD integration for continuous testing
-Passionate about leveraging AI to advance automation strategies
+
 📫 Let's Connect!
 
-Check out my repositories, and feel free to reach out! 🚀
+
+
+🔥 GitHub Streak & Activity
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=AG-85&theme=tokyonight" alt="GitHub Streak Stats" />
+
