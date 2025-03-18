@@ -35,3 +35,6 @@ I'm passionate about building scalable, efficient automation frameworks and inte
 
 ---
 
+## 📊 **GitHub Stats**  
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=AG-85&show_icons=true&theme=radical)  
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AG-85&layout=compact&theme=radical)  
