@@ -15,7 +15,8 @@ I'm passionate about building scalable, efficient automation frameworks and inte
 
 ### ⚙️ **CI/CD & DevOps**  
 - 🔹 **Jenkins & GitHub Actions** for continuous testing  
-- 🔹 **Terraform & Docker** for Infrastructure as Code  
+- 🔹 **Terraform & Docker** for Infrastructure as Code
+- 🔹 **AWS** (Amazon Web Services) for Cloud Infrastructure 
 - 🔹 **Automated Deployment Strategies**  
 
 ### 🤖 **AI in QA**  
