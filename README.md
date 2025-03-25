@@ -1,3 +1,9 @@
+# **Automated build and deploy**
+
+This project automatically deploys a web application to an amazon EC2 server. The application uses Github actions and terraform to build amazon EC2 instnce from scratch and then deploy the web application into the new EC2 instance.
+
+---
+
 # 🚀 **Automation QA Engineer | 10+ Years Experience**  
 
 Hi! I'm **Ambikha**, a **QA Engineer** with **10+ years of experience** in software testing. While I have a strong foundation in **manual testing**, my primary focus is on **test automation**, **DevOps practices**, and **AI-driven testing solutions**.  
